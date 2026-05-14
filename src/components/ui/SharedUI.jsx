@@ -56,13 +56,19 @@ export function BeforeAfterSlider({ treatment = '', timeframe = '' }) {
   return (
     <div className="rounded-2xl overflow-hidden border border-overlay-10">
       <div ref={containerRef} className="before-after-slider relative w-full aspect-[4/3]" onMouseDown={() => { isDragging.current = true; }} onTouchStart={() => { isDragging.current = true; }}>
-        <div className="absolute inset-0 bg-gradient-to-br from-white/20 to-white/5 flex items-center justify-center"><span className="font-mono text-4xl text-white-soft/30">AFTER</span></div>
-        <div className="before-clip absolute inset-0 bg-gradient-to-br from-navy-mid to-navy-card flex items-center justify-center" style={{ clipPath: 'inset(0 50% 0 0)' }}><span className="font-mono text-4xl text-white-soft/20">BEFORE</span></div>
+        {/* AFTER image */}
+        <div className="absolute inset-0">
+          <img src="/images/smile-after.png" alt="After treatment" className="w-full h-full object-cover" />
+        </div>
+        {/* BEFORE image */}
+        <div className="before-clip absolute inset-0" style={{ clipPath: 'inset(0 50% 0 0)' }}>
+          <img src="/images/smile-before.png" alt="Before treatment" className="w-full h-full object-cover" />
+        </div>
         <div ref={sliderRef} className="absolute top-0 h-full w-0.5 bg-gold-primary z-10" style={{ left: '50%' }}>
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-gold-primary flex items-center justify-center shadow-gold-glow cursor-grab"><span className="text-navy-deep font-mono text-xs">↔</span></div>
         </div>
-        <span className="absolute bottom-3 left-3 font-mono text-[11px] text-white-soft/60 z-10">BEFORE</span>
-        <span className="absolute bottom-3 right-3 font-mono text-[11px] text-gold-primary z-10">AFTER</span>
+        <span className="absolute bottom-3 left-3 font-mono text-[11px] text-white/80 z-10 bg-black/40 px-2 py-0.5 rounded">BEFORE</span>
+        <span className="absolute bottom-3 right-3 font-mono text-[11px] text-gold-primary z-10 bg-black/40 px-2 py-0.5 rounded">AFTER</span>
       </div>
       {treatment && (<div className="p-4 bg-navy-card"><p className="font-heading font-semibold text-white-soft text-sm">{treatment}</p>{timeframe && <span className="font-mono text-[11px] text-gold-primary">{timeframe}</span>}</div>)}
     </div>

@@ -142,11 +142,12 @@ export default function Contact() {
             {/* Col 3 - Map & Emergency */}
             <ScrollReveal delay={0.3}>
               <div className="space-y-6">
-                <div className="rounded-2xl overflow-hidden bg-navy-card aspect-[4/3] border border-overlay flex items-center justify-center">
-                  <div className="text-center">
-                    <MapPin size={32} className="text-gold-primary mx-auto mb-2" />
-                    <p className="font-mono text-sm text-white-soft/30">Map Placeholder</p>
-                    <p className="font-mono text-[10px] text-white-soft/20 mt-1">Dark Themed Map</p>
+                <div className="rounded-2xl overflow-hidden bg-navy-card aspect-[4/3] border border-overlay relative group">
+                  <img src="/images/clinic-exterior.png" alt="SmileAura clinic location" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                  <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+                    <div className="w-12 h-12 bg-navy-deep/80 rounded-full flex items-center justify-center shadow-gold-glow border border-gold-primary">
+                      <MapPin size={24} className="text-gold-primary" />
+                    </div>
                   </div>
                 </div>
                 <div className="rounded-2xl border-2 border-gold-primary/40 bg-navy-deep p-6">

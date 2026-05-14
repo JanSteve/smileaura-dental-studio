@@ -13,12 +13,10 @@ export default function AboutTeaser() {
             <div className="relative">
               <div className="absolute -top-4 -left-4 w-16 h-16 border-l-2 border-t-2 border-gold-primary/40" />
               <div className="rounded-3xl overflow-hidden bg-gradient-to-br from-navy-card to-navy-mid aspect-[4/3] border border-overlay">
-                <div className="w-full h-full flex items-center justify-center">
-                  <p className="font-mono text-sm text-white-soft/20">Clinic Interior</p>
-                </div>
+                <img src="/images/clinic-interior.png" alt="SmileAura clinic interior with modern dental equipment" className="w-full h-full object-cover" />
               </div>
-              <div className="absolute -bottom-6 -right-6 w-40 h-40 rounded-2xl overflow-hidden bg-gradient-to-br from-teal-accent/20 to-navy-card border border-overlay-10 rotate-3 flex items-center justify-center">
-                <p className="font-mono text-[10px] text-white-soft/20">Patient Smile</p>
+              <div className="absolute -bottom-6 -right-6 w-40 h-40 rounded-2xl overflow-hidden bg-gradient-to-br from-teal-accent/20 to-navy-card border border-overlay-10 rotate-3">
+                <img src="/images/smile-after.png" alt="Patient smile result" className="w-full h-full object-cover" />
               </div>
             </div>
           </ScrollReveal>

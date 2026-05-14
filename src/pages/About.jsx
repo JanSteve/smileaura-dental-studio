@@ -8,6 +8,11 @@ const values = [
   { icon: '🌱', title: 'Lifelong Partnership', desc: 'Our relationship doesn\'t end when you leave the chair. We track your oral health over years, not appointments.' },
 ];
 
+const clinicImages = [
+  '/images/clinic-interior.png', '/images/clinic-waiting.png', '/images/treatment-room.png',
+  '/images/dental-technology.png', '/images/clinic-exterior.png', '/images/clinic-interior.png'
+];
+
 export default function About() {
   return (
     <>
@@ -28,8 +33,8 @@ export default function About() {
             <ScrollReveal className="lg:w-[45%]">
               <div className="relative">
                 <div className="absolute -top-4 -left-4 w-16 h-16 border-l-2 border-t-2 border-gold-primary/40" />
-                <div className="rounded-3xl overflow-hidden bg-gradient-to-br from-navy-card to-navy-mid aspect-[4/3] border border-overlay flex items-center justify-center">
-                  <p className="font-mono text-sm text-white-soft/20">Clinic Interior</p>
+                <div className="rounded-3xl overflow-hidden bg-gradient-to-br from-navy-card to-navy-mid aspect-[4/3] border border-overlay">
+                  <img src="/images/clinic-waiting.png" alt="SmileAura luxury waiting room" className="w-full h-full object-cover" />
                 </div>
               </div>
             </ScrollReveal>
@@ -74,12 +79,12 @@ export default function About() {
         <div className="max-w-[1400px] mx-auto px-6">
           <ScrollReveal className="text-center mb-16"><h2 className="font-display text-4xl md:text-[58px] text-white-soft">Step Inside <span className="text-gold-light italic">SmileAura</span></h2></ScrollReveal>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-            {[...Array(6)].map((_, i) => (
+            {clinicImages.map((img, i) => (
               <ScrollReveal key={i} delay={i * 0.1}>
                 <div className="group rounded-2xl overflow-hidden bg-navy-card aspect-[4/3] relative cursor-pointer">
-                  <div className="w-full h-full flex items-center justify-center"><p className="font-mono text-[10px] text-white-soft/20">Clinic Interior {i + 1}</p></div>
+                  <img src={img} alt={`SmileAura clinic view ${i + 1}`} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                   <div className="absolute inset-0 bg-gold-primary/0 group-hover:bg-gold-primary/10 transition-colors flex items-center justify-center">
-                    <span className="font-mono text-[11px] text-white-soft opacity-0 group-hover:opacity-100 transition-opacity">SmileAura Interior</span>
+                    <span className="font-mono text-[11px] text-white opacity-0 group-hover:opacity-100 transition-opacity bg-black/40 px-3 py-1 rounded-full">View</span>
                   </div>
                 </div>
               </ScrollReveal>

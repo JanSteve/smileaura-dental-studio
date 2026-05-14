@@ -50,24 +50,18 @@ export default function Hero() {
             </motion.div>
           </div>
 
-          {/* Right Block */}
+          {/* Right Block - REAL IMAGE */}
           <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.8, delay: 0.3 }}
             className="lg:w-[42%] hidden lg:block relative">
             <div className="relative rounded-[40px_12px_40px_12px] border-[1.5px] border-gold-primary/40 overflow-hidden shadow-gold-glow aspect-[3/4] bg-gradient-to-br from-navy-card to-navy-mid">
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="text-center">
-                  <div className="w-24 h-24 mx-auto mb-4 rounded-full bg-gold-primary/10 flex items-center justify-center">
-                    <svg width="48" height="48" viewBox="0 0 32 32" fill="none"><path d="M16 2C12.5 2 10 4 9 6C8 8 7 9 5 9C3 9 2 11 2 13C2 15 3 17 5 17C6 17 7 17.5 7.5 19C8 20.5 8.5 23 9 25C9.5 27 10 30 12 30C14 30 14.5 27 15 25C15.5 23 16 21 16 21C16 21 16.5 23 17 25C17.5 27 18 30 20 30C22 30 22.5 27 23 25C23.5 23 24 20.5 24.5 19C25 17.5 26 17 27 17C29 17 30 15 30 13C30 11 29 9 27 9C25 9 24 8 23 6C22 4 19.5 2 16 2Z" stroke="#C9963A" strokeWidth="1.5" fill="none"/></svg>
-                  </div>
-                  <p className="font-mono text-[11px] text-gold-primary/50">SmileAura Studio</p>
-                </div>
-              </div>
+              <img src="/images/happy-patient.png" alt="Happy SmileAura patient with a beautiful smile" className="w-full h-full object-cover" />
+              <div className="absolute inset-0 bg-gradient-to-t from-navy-deep/40 via-transparent to-transparent" />
             </div>
 
             {/* Floating badges */}
             <motion.div animate={{ y: [0, -8, 0] }} transition={{ duration: 3, repeat: Infinity, ease: 'easeInOut' }}
-              className="absolute -bottom-4 -left-8 bg-white rounded-2xl px-5 py-3 shadow-lg">
-              <p className="font-heading font-bold text-navy-deep text-sm">⭐ 4.9 Rating</p>
+              className="absolute -bottom-4 -left-8 bg-white dark:bg-navy-card rounded-2xl px-5 py-3 shadow-lg border border-overlay-10">
+              <p className="font-heading font-bold text-navy-deep dark:text-white-soft text-sm">⭐ 4.9 Rating</p>
               <p className="font-mono text-[10px] text-grey-text">847 Happy Patients</p>
             </motion.div>
 

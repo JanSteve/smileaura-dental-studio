@@ -36,8 +36,8 @@ export default function TreatmentDetail() {
               <Link to="/contact" className="gold-shimmer-btn font-heading font-bold px-8 py-3.5 rounded-full inline-block">Book This Treatment</Link>
             </div>
             <div className="lg:w-[45%]">
-              <div className="rounded-[40px_12px_40px_12px] border-[1.5px] border-gold-primary/30 overflow-hidden aspect-[4/3] bg-gradient-to-br from-navy-card to-navy-mid flex items-center justify-center shadow-gold-glow">
-                <p className="font-mono text-sm text-white-soft/20">Treatment Image</p>
+              <div className="rounded-[40px_12px_40px_12px] border-[1.5px] border-gold-primary/30 overflow-hidden aspect-[4/3] bg-gradient-to-br from-navy-card to-navy-mid shadow-gold-glow">
+                <img src="/images/treatment-room.png" alt={treatment.name} className="w-full h-full object-cover" />
               </div>
             </div>
           </div>
