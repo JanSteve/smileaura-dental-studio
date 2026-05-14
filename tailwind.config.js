@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 export default {
+  darkMode: 'class',
   content: [
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
@@ -7,12 +8,18 @@ export default {
   theme: {
     extend: {
       colors: {
-        navy: {
-          deep: '#060B18',
-          mid: '#0A1628',
-          card: '#0F1E35',
-          border: 'rgba(255, 255, 255, 0.07)',
-        },
+        'navy-deep': 'var(--color-bg-deep)',
+        'navy-mid': 'var(--color-bg-mid)',
+        'navy-card': 'var(--color-bg-card)',
+        'gold-primary': '#C9963A',
+        'gold-light': '#E8B964',
+        'gold-border': 'var(--color-gold-border)',
+        'teal-accent': '#2DD4BF',
+        'white-soft': 'var(--color-text-soft)',
+        'white-muted': 'var(--color-text-muted)',
+        'grey-text': 'var(--color-text-grey)',
+        'overlay': 'var(--color-overlay)',
+        'overlay-10': 'var(--color-overlay-10)',
         gold: {
           primary: '#C9963A',
           light: '#E8B86D',

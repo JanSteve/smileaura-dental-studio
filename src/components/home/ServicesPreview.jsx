@@ -24,11 +24,11 @@ export default function ServicesPreview() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {previewServices.map((s, i) => (
             <ScrollReveal key={i} delay={i * 0.1}>
-              <div className="tilt-card group bg-navy-card border border-white/5 rounded-2xl p-8 h-full hover:border-gold-primary/30 hover:bg-navy-card/80 transition-all duration-500 cursor-pointer">
+              <div className="tilt-card group bg-navy-card border border-overlay rounded-2xl p-8 h-full hover:border-gold-primary/30 hover:bg-navy-card/80 transition-all duration-500 cursor-pointer">
                 <div className="w-16 h-16 rounded-2xl bg-navy-mid flex items-center justify-center text-3xl mb-6 group-hover:bg-teal-accent/10 transition-colors">
                   {s.icon}
                 </div>
-                <h3 className="font-heading font-semibold text-xl text-white mb-3">{s.name}</h3>
+                <h3 className="font-heading font-semibold text-xl text-white-soft mb-3">{s.name}</h3>
                 <p className="font-body text-sm text-white-muted leading-relaxed mb-4">{s.desc}</p>
                 <span className="font-heading text-sm text-gold-primary opacity-0 group-hover:opacity-100 transition-opacity duration-300 inline-flex items-center gap-1">
                   Learn More <span className="group-hover:translate-x-1 transition-transform">→</span>

@@ -26,11 +26,11 @@ export default function Services() {
       </section>
 
       {/* Filter Bar */}
-      <div className="sticky top-[72px] z-50 bg-navy-deep/90 backdrop-blur-xl border-b border-white/5 py-4">
+      <div className="sticky top-[72px] z-50 bg-navy-deep/90 backdrop-blur-xl border-b border-overlay py-4">
         <div className="max-w-[1400px] mx-auto px-6 flex gap-3 overflow-x-auto pb-1 scrollbar-hide">
           {serviceCategories.map(cat => (
             <button key={cat} onClick={() => setServiceFilter(cat)}
-              className={`font-heading text-sm font-medium px-5 py-2 rounded-full whitespace-nowrap transition-all ${serviceFilter === cat ? 'bg-gold-primary text-navy-deep' : 'text-white hover:text-gold-light'}`}>
+              className={`font-heading text-sm font-medium px-5 py-2 rounded-full whitespace-nowrap transition-all ${serviceFilter === cat ? 'bg-gold-primary text-navy-deep' : 'text-white-soft hover:text-gold-light'}`}>
               {cat}
             </button>
           ))}
@@ -53,15 +53,15 @@ export default function Services() {
                 </ScrollReveal>
               ) : (
                 <>
-                  <ScrollReveal><h2 className="font-heading font-bold text-3xl text-white mb-8">{category}</h2></ScrollReveal>
+                  <ScrollReveal><h2 className="font-heading font-bold text-3xl text-white-soft mb-8">{category}</h2></ScrollReveal>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     {items.map((s, i) => (
                       <ScrollReveal key={s.id} delay={i * 0.1}>
-                        <div className="tilt-card bg-navy-card rounded-2xl p-7 border border-white/5 hover:border-gold-primary/20 transition-all h-full">
+                        <div className="tilt-card bg-navy-card rounded-2xl p-7 border border-overlay hover:border-gold-primary/20 transition-all h-full">
                           <div className="flex items-start gap-4 mb-4">
                             <span className="text-3xl">{s.icon}</span>
                             <div className="flex-1">
-                              <h3 className="font-heading font-semibold text-xl text-white mb-2">{s.name}</h3>
+                              <h3 className="font-heading font-semibold text-xl text-white-soft mb-2">{s.name}</h3>
                               <p className="font-body text-sm text-white-muted leading-relaxed">{s.desc}</p>
                             </div>
                           </div>
@@ -70,7 +70,7 @@ export default function Services() {
                               <div key={j} className="flex items-center gap-2"><Check size={14} className="text-teal-accent flex-shrink-0" /><span className="font-body text-[13px] text-white-muted">{inc}</span></div>
                             ))}
                           </div>
-                          <div className="flex items-center justify-between pt-4 border-t border-white/5">
+                          <div className="flex items-center justify-between pt-4 border-t border-overlay">
                             <div className="flex gap-4">
                               <span className="font-mono text-[11px] text-white-muted bg-navy-mid px-3 py-1 rounded-full">{s.duration}</span>
                               <span className="font-mono text-[11px] text-gold-primary">From {s.price}</span>

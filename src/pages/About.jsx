@@ -28,8 +28,8 @@ export default function About() {
             <ScrollReveal className="lg:w-[45%]">
               <div className="relative">
                 <div className="absolute -top-4 -left-4 w-16 h-16 border-l-2 border-t-2 border-gold-primary/40" />
-                <div className="rounded-3xl overflow-hidden bg-gradient-to-br from-navy-card to-navy-mid aspect-[4/3] border border-white/5 flex items-center justify-center">
-                  <p className="font-mono text-sm text-white/20">Clinic Interior</p>
+                <div className="rounded-3xl overflow-hidden bg-gradient-to-br from-navy-card to-navy-mid aspect-[4/3] border border-overlay flex items-center justify-center">
+                  <p className="font-mono text-sm text-white-soft/20">Clinic Interior</p>
                 </div>
               </div>
             </ScrollReveal>
@@ -60,7 +60,7 @@ export default function About() {
               <ScrollReveal key={i} delay={i * 0.15}>
                 <div className="glass-card rounded-2xl p-8 border-t-2 border-gold-primary h-full">
                   <div className="w-14 h-14 rounded-2xl bg-teal-accent/10 flex items-center justify-center text-2xl mb-6">{v.icon}</div>
-                  <h3 className="font-heading font-bold text-white text-xl mb-3">{v.title}</h3>
+                  <h3 className="font-heading font-bold text-white-soft text-xl mb-3">{v.title}</h3>
                   <p className="font-body text-white-muted text-sm leading-relaxed">{v.desc}</p>
                 </div>
               </ScrollReveal>
@@ -77,9 +77,9 @@ export default function About() {
             {[...Array(6)].map((_, i) => (
               <ScrollReveal key={i} delay={i * 0.1}>
                 <div className="group rounded-2xl overflow-hidden bg-navy-card aspect-[4/3] relative cursor-pointer">
-                  <div className="w-full h-full flex items-center justify-center"><p className="font-mono text-[10px] text-white/20">Clinic Interior {i + 1}</p></div>
+                  <div className="w-full h-full flex items-center justify-center"><p className="font-mono text-[10px] text-white-soft/20">Clinic Interior {i + 1}</p></div>
                   <div className="absolute inset-0 bg-gold-primary/0 group-hover:bg-gold-primary/10 transition-colors flex items-center justify-center">
-                    <span className="font-mono text-[11px] text-white opacity-0 group-hover:opacity-100 transition-opacity">SmileAura Interior</span>
+                    <span className="font-mono text-[11px] text-white-soft opacity-0 group-hover:opacity-100 transition-opacity">SmileAura Interior</span>
                   </div>
                 </div>
               </ScrollReveal>
@@ -89,12 +89,12 @@ export default function About() {
       </section>
 
       {/* Accreditations */}
-      <section className="py-16 bg-navy-card border-y border-white/5">
+      <section className="py-16 bg-navy-card border-y border-overlay">
         <div className="max-w-[1000px] mx-auto px-6">
           <div className="flex flex-wrap items-center justify-center gap-12">
             {['Indian Dental Association', 'ISO 9001:2015', 'Best Dental Clinic 2024'].map((badge) => (
               <div key={badge} className="text-center">
-                <div className="w-16 h-16 mx-auto rounded-full bg-navy-mid border border-white/10 flex items-center justify-center mb-2"><span className="text-gold-primary text-xl">✦</span></div>
+                <div className="w-16 h-16 mx-auto rounded-full bg-navy-mid border border-overlay-10 flex items-center justify-center mb-2"><span className="text-gold-primary text-xl">✦</span></div>
                 <p className="font-mono text-[11px] text-white-muted">{badge}</p>
               </div>
             ))}

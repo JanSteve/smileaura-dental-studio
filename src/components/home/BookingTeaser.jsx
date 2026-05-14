@@ -22,7 +22,7 @@ export default function BookingTeaser() {
           <ScrollReveal delay={0.1}>
             <div className="glass-card rounded-2xl p-8 text-center hover:border-gold-primary/20 transition-all">
               <Phone size={32} className="text-gold-primary mx-auto mb-4" />
-              <h3 className="font-heading font-bold text-white text-lg mb-2">Call Us Now</h3>
+              <h3 className="font-heading font-bold text-white-soft text-lg mb-2">Call Us Now</h3>
               <a href="tel:+919876543210" className="font-mono text-2xl text-gold-primary hover:text-gold-light block mb-2">+91 98765 43210</a>
               <p className="font-body text-sm text-white-muted">Available 9AM–8PM, 7 days a week</p>
             </div>
@@ -30,7 +30,7 @@ export default function BookingTeaser() {
           <ScrollReveal delay={0.2}>
             <div className="glass-card rounded-2xl p-8 text-center hover:border-gold-primary/20 transition-all">
               <Calendar size={32} className="text-gold-primary mx-auto mb-4" />
-              <h3 className="font-heading font-bold text-white text-lg mb-4">Book Online</h3>
+              <h3 className="font-heading font-bold text-white-soft text-lg mb-4">Book Online</h3>
               <Link to="/contact" className="gold-shimmer-btn font-heading font-bold px-8 py-3.5 rounded-full inline-block">
                 Book Free Consultation
               </Link>

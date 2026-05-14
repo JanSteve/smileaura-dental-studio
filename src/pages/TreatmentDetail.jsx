@@ -30,14 +30,14 @@ export default function TreatmentDetail() {
               <p className="font-display italic text-xl text-gold-light mb-8">{treatment.desc}</p>
               <div className="flex flex-wrap gap-4 mb-8">
                 {[{ icon: <Clock size={16} />, label: treatment.duration }, { icon: <Repeat size={16} />, label: '1-3 Sessions' }, { icon: <Zap size={16} />, label: 'Minimal Pain' }, { icon: <Heart size={16} />, label: 'Fast Recovery' }].map((s, i) => (
-                  <span key={i} className="flex items-center gap-2 bg-navy-card px-4 py-2 rounded-full font-mono text-[12px] text-white-muted border border-white/5">{s.icon} {s.label}</span>
+                  <span key={i} className="flex items-center gap-2 bg-navy-card px-4 py-2 rounded-full font-mono text-[12px] text-white-muted border border-overlay">{s.icon} {s.label}</span>
                 ))}
               </div>
               <Link to="/contact" className="gold-shimmer-btn font-heading font-bold px-8 py-3.5 rounded-full inline-block">Book This Treatment</Link>
             </div>
             <div className="lg:w-[45%]">
               <div className="rounded-[40px_12px_40px_12px] border-[1.5px] border-gold-primary/30 overflow-hidden aspect-[4/3] bg-gradient-to-br from-navy-card to-navy-mid flex items-center justify-center shadow-gold-glow">
-                <p className="font-mono text-sm text-white/20">Treatment Image</p>
+                <p className="font-mono text-sm text-white-soft/20">Treatment Image</p>
               </div>
             </div>
           </div>
@@ -65,9 +65,9 @@ export default function TreatmentDetail() {
           <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
             {['Consultation', 'Preparation', 'Treatment', 'Aftercare'].map((step, i) => (
               <ScrollReveal key={i} delay={i * 0.15}>
-                <div className="text-center p-6 bg-navy-card rounded-2xl border border-white/5">
+                <div className="text-center p-6 bg-navy-card rounded-2xl border border-overlay">
                   <span className="font-mono text-gold-primary text-3xl block mb-3">0{i + 1}</span>
-                  <h3 className="font-heading font-semibold text-white text-lg mb-2">{step}</h3>
+                  <h3 className="font-heading font-semibold text-white-soft text-lg mb-2">{step}</h3>
                   <p className="font-body text-sm text-white-muted">Professional care at every stage of your treatment journey.</p>
                 </div>
               </ScrollReveal>
@@ -103,9 +103,9 @@ export default function TreatmentDetail() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {related.map((s, i) => (
                 <ScrollReveal key={s.id} delay={i * 0.1}>
-                  <Link to={`/treatments/${s.id}`} className="block bg-navy-card rounded-2xl p-6 border border-white/5 hover:border-gold-primary/20 transition-all">
+                  <Link to={`/treatments/${s.id}`} className="block bg-navy-card rounded-2xl p-6 border border-overlay hover:border-gold-primary/20 transition-all">
                     <span className="text-3xl block mb-3">{s.icon}</span>
-                    <h3 className="font-heading font-semibold text-white mb-2">{s.name}</h3>
+                    <h3 className="font-heading font-semibold text-white-soft mb-2">{s.name}</h3>
                     <p className="font-body text-sm text-white-muted">{s.desc}</p>
                   </Link>
                 </ScrollReveal>

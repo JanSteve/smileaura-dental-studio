@@ -34,13 +34,13 @@ export default function SmileQuiz() {
             {!quizComplete ? (
               <motion.div key={quizStep} initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: -20 }} transition={{ duration: 0.3 }}>
                 <p className="font-mono text-[11px] text-gold-primary mb-3">QUESTION {quizStep + 1} OF 5</p>
-                <h3 className="font-heading font-bold text-xl text-white mb-8">{currentQ.q}</h3>
+                <h3 className="font-heading font-bold text-xl text-white-soft mb-8">{currentQ.q}</h3>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   {currentQ.opts.map((opt) => (
                     <button key={opt.text} onClick={() => setQuizAnswer(quizStep, opt.text)}
-                      className="flex items-center gap-4 p-5 bg-navy-mid rounded-xl border border-white/5 hover:border-gold-primary/40 hover:bg-navy-card transition-all text-left min-h-[60px]">
+                      className="flex items-center gap-4 p-5 bg-navy-mid rounded-xl border border-overlay hover:border-gold-primary/40 hover:bg-navy-card transition-all text-left min-h-[60px]">
                       <span className="text-2xl">{opt.icon}</span>
-                      <span className="font-heading font-medium text-white text-sm">{opt.text}</span>
+                      <span className="font-heading font-medium text-white-soft text-sm">{opt.text}</span>
                     </button>
                   ))}
                 </div>
@@ -50,12 +50,12 @@ export default function SmileQuiz() {
                 <div className="w-16 h-16 mx-auto mb-6 rounded-full bg-teal-accent/20 flex items-center justify-center">
                   <span className="text-3xl">✨</span>
                 </div>
-                <h3 className="font-heading font-bold text-xl text-white mb-3">Your Personalized Recommendation</h3>
+                <h3 className="font-heading font-bold text-xl text-white-soft mb-3">Your Personalized Recommendation</h3>
                 <p className="font-body text-white-muted mb-6">Based on your answers, we recommend a</p>
                 <p className="font-display text-3xl text-gold-light italic mb-8">{rec.treatment}</p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <a href="/contact" className="gold-shimmer-btn font-heading font-bold px-8 py-3.5 rounded-full text-center">Book Your Free Assessment</a>
-                  <a href="https://wa.me/919876543210" target="_blank" rel="noopener noreferrer" className="bg-[#25D366] text-white font-heading font-bold px-8 py-3.5 rounded-full text-center hover:bg-[#20b858] transition-colors">Chat with a Dentist</a>
+                  <a href="https://wa.me/919876543210" target="_blank" rel="noopener noreferrer" className="bg-[#25D366] text-white-soft font-heading font-bold px-8 py-3.5 rounded-full text-center hover:bg-[#20b858] transition-colors">Chat with a Dentist</a>
                 </div>
                 <button onClick={resetQuiz} className="font-mono text-[12px] text-grey-text mt-6 hover:text-gold-primary transition-colors">Take Quiz Again</button>
               </motion.div>

@@ -19,11 +19,11 @@ export default function Team() {
       </section>
 
       {/* Filter */}
-      <div className="sticky top-[72px] z-50 bg-navy-deep/90 backdrop-blur-xl border-b border-white/5 py-4">
+      <div className="sticky top-[72px] z-50 bg-navy-deep/90 backdrop-blur-xl border-b border-overlay py-4">
         <div className="max-w-[1400px] mx-auto px-6 flex gap-3 overflow-x-auto pb-1">
           {teamCategories.map(cat => (
             <button key={cat} onClick={() => setTeamFilter(cat)}
-              className={`font-heading text-sm font-medium px-5 py-2 rounded-full whitespace-nowrap transition-all ${teamFilter === cat ? 'bg-gold-primary text-navy-deep' : 'text-white hover:text-gold-light'}`}>
+              className={`font-heading text-sm font-medium px-5 py-2 rounded-full whitespace-nowrap transition-all ${teamFilter === cat ? 'bg-gold-primary text-navy-deep' : 'text-white-soft hover:text-gold-light'}`}>
               {cat}
             </button>
           ))}
@@ -36,20 +36,20 @@ export default function Team() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {filtered.map((doc, i) => (
               <ScrollReveal key={doc.id} delay={i * 0.08}>
-                <div className="group bg-navy-card rounded-2xl overflow-hidden border border-white/5 hover:border-gold-primary/30 transition-all duration-500 hover:-translate-y-2.5">
+                <div className="group bg-navy-card rounded-2xl overflow-hidden border border-overlay hover:border-gold-primary/30 transition-all duration-500 hover:-translate-y-2.5">
                   <div className="aspect-[3/4] bg-gradient-to-b from-navy-mid to-navy-card overflow-hidden relative">
                     <div className="w-full h-full flex items-center justify-center group-hover:scale-[1.03] transition-transform duration-500">
                       <div className="text-center">
                         <div className="w-16 h-16 mx-auto rounded-full bg-gold-primary/10 flex items-center justify-center mb-2">
                           <span className="font-display text-2xl text-gold-primary">{doc.name.charAt(4)}</span>
                         </div>
-                        <p className="font-mono text-[9px] text-white/15">Dr. Portrait</p>
+                        <p className="font-mono text-[9px] text-white-soft/15">Dr. Portrait</p>
                       </div>
                     </div>
                     <div className="absolute inset-0 bg-gold-primary/0 group-hover:bg-gold-primary/[0.08] transition-colors" />
                   </div>
                   <div className="p-5">
-                    <h3 className="font-display text-xl font-bold text-white mb-0.5">{doc.name}</h3>
+                    <h3 className="font-display text-xl font-bold text-white-soft mb-0.5">{doc.name}</h3>
                     <p className="font-heading text-[13px] font-semibold text-teal-accent mb-2">{doc.designation}</p>
                     <div className="flex gap-1.5 flex-wrap mb-2">
                       {doc.tags.map(tag => <span key={tag} className="font-mono text-[9px] text-gold-primary bg-navy-mid px-2 py-0.5 rounded-full">{tag}</span>)}
@@ -76,7 +76,7 @@ export default function Team() {
         <div className="max-w-[1400px] mx-auto px-6">
           <div className="flex flex-col lg:flex-row gap-12">
             <div className="lg:w-[50%] rounded-3xl overflow-hidden bg-gradient-to-b from-navy-card to-navy-deep aspect-[3/4] flex items-center justify-center">
-              <p className="font-mono text-sm text-white/20">Founder Portrait</p>
+              <p className="font-mono text-sm text-white-soft/20">Founder Portrait</p>
             </div>
             <div className="lg:w-[50%] flex flex-col justify-center">
               <ScrollReveal>

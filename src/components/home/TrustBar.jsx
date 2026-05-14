@@ -10,7 +10,7 @@ const stats = [
 
 export default function TrustBar() {
   return (
-    <section className="bg-navy-card py-16 border-y border-white/5">
+    <section className="bg-navy-card py-16 border-y border-overlay">
       <div className="max-w-[1400px] mx-auto px-6">
         <ScrollReveal>
           <div className="grid grid-cols-2 md:grid-cols-5 gap-8">

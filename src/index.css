@@ -1,4 +1,34 @@
 @tailwind base;
+@layer base {
+  :root {
+    --color-bg-deep: #ffffff;
+    --color-bg-mid: #f8fafc;
+    --color-bg-card: #f1f5f9;
+    --color-text-soft: #0f172a;
+    --color-text-muted: #475569;
+    --color-text-grey: #64748b;
+    --color-overlay: rgba(0, 0, 0, 0.05);
+    --color-overlay-10: rgba(0, 0, 0, 0.1);
+    --color-gold-border: rgba(201, 150, 58, 0.3);
+  }
+
+  .dark {
+    --color-bg-deep: #0A1128;
+    --color-bg-mid: #101B3A;
+    --color-bg-card: #162347;
+    --color-text-soft: #F8FAFC;
+    --color-text-muted: #94A3B8;
+    --color-text-grey: #64748B;
+    --color-overlay: rgba(255, 255, 255, 0.05);
+    --color-overlay-10: rgba(255, 255, 255, 0.1);
+    --color-gold-border: rgba(201, 150, 58, 0.2);
+  }
+  
+  body {
+    @apply bg-navy-deep text-white-soft transition-colors duration-300;
+  }
+}
+
 @tailwind components;
 @tailwind utilities;
 

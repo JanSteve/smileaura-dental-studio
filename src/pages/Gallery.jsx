@@ -23,11 +23,11 @@ export default function Gallery() {
       </section>
 
       {/* Tabs */}
-      <div className="sticky top-[72px] z-50 bg-navy-deep/90 backdrop-blur-xl border-b border-white/5 py-4">
+      <div className="sticky top-[72px] z-50 bg-navy-deep/90 backdrop-blur-xl border-b border-overlay py-4">
         <div className="max-w-[1400px] mx-auto px-6 flex gap-3 overflow-x-auto pb-1">
           {galleryTabs.map(tab => (
             <button key={tab} onClick={() => setGalleryTab(tab)}
-              className={`font-heading text-sm font-medium px-5 py-2 rounded-full whitespace-nowrap transition-all ${galleryTab === tab ? 'bg-gold-primary text-navy-deep' : 'text-white hover:text-gold-light'}`}>
+              className={`font-heading text-sm font-medium px-5 py-2 rounded-full whitespace-nowrap transition-all ${galleryTab === tab ? 'bg-gold-primary text-navy-deep' : 'text-white-soft hover:text-gold-light'}`}>
               {tab}
             </button>
           ))}
@@ -49,10 +49,10 @@ export default function Gallery() {
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
               {[...Array(8)].map((_, i) => (
                 <ScrollReveal key={i} delay={(i % 3) * 0.1}>
-                  <div className="group rounded-2xl overflow-hidden bg-navy-card aspect-[4/3] relative cursor-pointer border border-white/5 hover:border-gold-primary/20 transition-all">
-                    <div className="w-full h-full flex items-center justify-center"><p className="font-mono text-sm text-white/20">Clinic Interior {i + 1}</p></div>
+                  <div className="group rounded-2xl overflow-hidden bg-navy-card aspect-[4/3] relative cursor-pointer border border-overlay hover:border-gold-primary/20 transition-all">
+                    <div className="w-full h-full flex items-center justify-center"><p className="font-mono text-sm text-white-soft/20">Clinic Interior {i + 1}</p></div>
                     <div className="absolute inset-0 bg-gold-primary/0 group-hover:bg-gold-primary/10 transition-colors flex items-center justify-center">
-                      <span className="font-mono text-[11px] text-white opacity-0 group-hover:opacity-100 transition-opacity">View Full</span>
+                      <span className="font-mono text-[11px] text-white-soft opacity-0 group-hover:opacity-100 transition-opacity">View Full</span>
                     </div>
                   </div>
                 </ScrollReveal>
@@ -63,8 +63,8 @@ export default function Gallery() {
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
               {[...Array(6)].map((_, i) => (
                 <ScrollReveal key={i} delay={(i % 3) * 0.1}>
-                  <div className="rounded-2xl overflow-hidden bg-navy-card aspect-[4/3] border border-white/5 flex items-center justify-center">
-                    <p className="font-mono text-sm text-white/20">{galleryTab} {i + 1}</p>
+                  <div className="rounded-2xl overflow-hidden bg-navy-card aspect-[4/3] border border-overlay flex items-center justify-center">
+                    <p className="font-mono text-sm text-white-soft/20">{galleryTab} {i + 1}</p>
                   </div>
                 </ScrollReveal>
               ))}

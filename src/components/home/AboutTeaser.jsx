@@ -12,13 +12,13 @@ export default function AboutTeaser() {
           <ScrollReveal className="lg:w-[45%]">
             <div className="relative">
               <div className="absolute -top-4 -left-4 w-16 h-16 border-l-2 border-t-2 border-gold-primary/40" />
-              <div className="rounded-3xl overflow-hidden bg-gradient-to-br from-navy-card to-navy-mid aspect-[4/3] border border-white/5">
+              <div className="rounded-3xl overflow-hidden bg-gradient-to-br from-navy-card to-navy-mid aspect-[4/3] border border-overlay">
                 <div className="w-full h-full flex items-center justify-center">
-                  <p className="font-mono text-sm text-white/20">Clinic Interior</p>
+                  <p className="font-mono text-sm text-white-soft/20">Clinic Interior</p>
                 </div>
               </div>
-              <div className="absolute -bottom-6 -right-6 w-40 h-40 rounded-2xl overflow-hidden bg-gradient-to-br from-teal-accent/20 to-navy-card border border-white/10 rotate-3 flex items-center justify-center">
-                <p className="font-mono text-[10px] text-white/20">Patient Smile</p>
+              <div className="absolute -bottom-6 -right-6 w-40 h-40 rounded-2xl overflow-hidden bg-gradient-to-br from-teal-accent/20 to-navy-card border border-overlay-10 rotate-3 flex items-center justify-center">
+                <p className="font-mono text-[10px] text-white-soft/20">Patient Smile</p>
               </div>
             </div>
           </ScrollReveal>
@@ -41,7 +41,7 @@ export default function AboutTeaser() {
             <ScrollReveal delay={0.3}>
               <div className="space-y-4 mb-8">
                 {features.map((f, i) => (
-                  <div key={i} className="flex items-center gap-3 border-b border-white/5 pb-3">
+                  <div key={i} className="flex items-center gap-3 border-b border-overlay pb-3">
                     <Check size={16} className="text-gold-primary flex-shrink-0" />
                     <span className="font-body text-white-soft text-[15px]">{f}</span>
                   </div>
